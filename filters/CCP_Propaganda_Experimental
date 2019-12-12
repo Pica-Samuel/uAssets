@@ -1,0 +1,49 @@
+! Title: uBlock filters – Communist China Propaganda 
+! Description: Experimental Filtering of Communist China Propaganda by Source 
+! Expires: 7 days
+! Licence: https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE
+! Homepage: https://github.com/uBlockOrigin/uAssets
+!
+! GitHub issues: https://github.com/uBlockOrigin/uAssets/issues
+! GitHub pull requests: https://github.com/uBlockOrigin/uAssets/pulls
+!
+! Information are based on FaceBook voting results (location: Hong Kong) 
+! 
+
+! Using request of type `document` will cause the whole site to be blocked through
+! strict blocking, yet the site will render properly if a user still decide to
+! go ahead.
+
+! Source 1: 2019-12-13: https://www.facebook.com/groups/2798734860192968/permalink/2860821587317628/
+!
+!
+!
+
+*.on.cc/*
+google.*##div.g:has-text(東方日報)
+google.*##div.g:has(A[href*=".on.cc"])
+##A[title*=東方日報]
+##A[href*=.on.cc]
+##A[data-href*=".on.cc"]
+##A[ping*=".on.cc"]
+
+
+*.hk01.com/*
+google.*##div.g:has-text(香港01)
+google.*##div.g:has-text(HK01)
+google.*##div.g:has(A[href*="hk01.com"])
+google.*##g-inner-card:has(A[href*="facebook.com/hk01"])
+facebook.*##div._401d:has(A[href*="/hk01"])
+facebook.*##div._401d:has(A[href*="/HK01"])
+facebook.*##div._401d:has(A[href*="/01philosophy"])
+facebook.*##div._401d:has(A[href*=".hk01"])
+facebook.*##div._401d:has(A[href*="/beingms"])
+facebook.*##div._401d:has-text(隱形香港)
+##A[title*=香港01]
+##A[title*=HK01]
+##A[href*=.hk01.com]
+##A[data-href*=".hk01.com"]
+##A[ping*=".hk01.com"]
+##A[href*=facebook.com/hk01]
+##A[data-href*="facebook.com/hk01"]
+
